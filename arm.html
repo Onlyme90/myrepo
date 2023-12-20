@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Armstrong No</title>
+</head>
+<body>
+<input type="text" id="t1">
+<button id="b1" onclick="myfun();">Check</button>
+<script type="text/javascript">
+	function myfun() 
+	{
+		var n,temp,rem,sum=0;
+		n=parseInt(document.getElementById('t1').value);
+		temp=n;
+		while(n>0)
+		{
+			rem=parseInt(n%10);
+			sum=parseInt(sum+(rem*rem*rem));
+			n=parseInt(n/10);
+		}
+		if(temp==sum)
+		{
+			alert("Armstrong");
+
+		}
+		else
+		{
+			alert("not Armstrong");
+		}
+	}
+</script>
+</body>
+</html>
