@@ -1,9 +1,11 @@
+echo 'hi'
 pipeline {
     agent any
 
     stages {
         stage('Build') {
             steps {
+                 git 'https://github.com/Onlyme90/myrepo.git'
                 echo 'Building the application...'
                 // Add your build commands here
             }
